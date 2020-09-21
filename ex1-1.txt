@@ -1,0 +1,74 @@
+1,Tìm hiểu về setter
+1,Viết chương trình liệt kê crush,nyc
+person<name,age,sex,address,
+            speak();introduce()>
+crush -> person: appearence, favorites;
+odfriend -> person:favorites
+
+list owner,persons[],showall,addperson
+
+1 - Tổng quan về getter và setter
+Setter và Getter là 2 phương thức sử dụng để cập nhật hoặc lấy ra giá trị thuộc tính, đặc biệt dành cho các thuộc tính ở phạm vi private.
+
+Việc sử dụng Setter và Getter cần thiết trong việc kiểm soát những thuộc tính quan trọng mà ta thường được sử dụng và yêu cầu giá trị chính xác.
+Ví dụ thuộc tính age lưu tuổi con người, thực tế thì phạm vi tuổi là từ 0 đến 100, thì ta không thể cho chương trình lưu giá trị age âm hoặc quá 100 được.
+
+2- Cách khởi tạo
+    1. Dưới dạng 1 phương thức.
+        Vì getter và setter về cơ bản là những hàm để lấy ra hoặc thay đổi giá trị, có nhiều cách để khởi tạo vào sử dụng chúng. Ví dụ :
+
+        var obj = {
+        foo: 'this is the value of foo',
+        getFoo: function() {
+            return this.foo;
+        },
+        setFoo: function(val) {
+            this.foo = val;
+        }
+        }
+        
+        console.log(obj.getFoo());
+        // "this is the value of foo"
+        
+        obj.setFoo('hello');
+        
+        console.log(obj.getFoo());
+        // "hello"
+
+    2. Với từ khóa.
+        Có một cách tốt hơn và chúng ta cũng hay dùng hơn đó là sử dụng từ khóa get, set.
+
+        Để khởitạo một getter thì bạn chỉ việc thêm từ khóa get vào ngay trước khai báo hàm để biến hàm đó thành getter; 
+        cũng tương tự với từ khóa set trước hàm setter. Cú pháp như sau :
+
+            var obj = {
+            fooVal: 'this is the value of foo',
+            get foo() {
+                return this.fooVal;
+            },
+            set foo(val) {
+                this.fooVal = val;
+            }
+            }
+
+            // getter 
+            console.log(obj.foo);
+            // "this is the value of foo"
+
+            // setter 
+            obj.foo = 'hello';
+            
+            console.log(obj.foo);
+            // "hello"
+
+3 - Hoạt động trong getter và setter
+
+    Một khi đã tạo ra getter và setter thì bạn có thể tiếp tục và thực hiện các thao tác trên dữ liệu trước khi thay đổi hoặc là trả về.
+
+4. Bảo vệ dữ liệu với getter và setter
+
+    Chúng ta cùng chuyển sang tìm hiểu cách ẩn dữ liệu khi nhìn từ bên ngoài vào với sự giúp đỡ của getter và setter.
+
+5 - Khi nào nên sử dụng getter và setter
+
+
