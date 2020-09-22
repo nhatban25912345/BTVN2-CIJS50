@@ -84,12 +84,12 @@ class List {
                         this.persons.push(nameCrush);
                         console.log(persons);
                     } else if(InputCrushEx == "ex"){
-                        let name = prompt("Input name your crush: ");
-                        let age = prompt("Input age your crush:");
-                        let address = prompt("Input address your crush:");
-                        let appearance = prompt("Input  appearance your crush:");
-                        let favorite = prompt("Input favorite your crush: ");
-                        let nameEx= new Crush(name,age,address,appearance,favorite);
+                        let name = prompt("Input name your Ex-Lover: ");
+                        let age = prompt("Input age your Ex-Lover:");
+                        let address = prompt("Input address your Ex-Lover:");
+                        let appearance = prompt("Input  appearance your Ex-Lover:");
+                        let favorite = prompt("Input favorite your Ex-Lover: ");
+                        let nameEx= new Ex_Love(name,age,address,appearance,favorite);
                         this.persons.push(nameEx);
                         console.log(persons);
                     } else {};
