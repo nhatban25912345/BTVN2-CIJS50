@@ -20,48 +20,45 @@ const arrayInput = stringInput.split("");
 //     i++;
 
 // }
-
+let k = 0;
 let i=0;
 let j=0;
 let s ;
+
 while (i < array.length) {
     s = true;
-    let check;
+    // let check;
     while(j < arrayInput.length){
         let l = arrayInput.length;
-        if ( array[i] == arrayInput[j] ){
-        arrayInput.splice(j,1);
-        // array.splice(i,1);
-        s = false;
-        // break;
-
         
-        if (arrayInput.length == l){
-            check = true;
-        } else {
-            check = false;
-        }
-        if  (check == false){
-            j = j +1;
-        }
-
-
+        if ( array[i] == arrayInput[j] ){
+            if (k==0) {
+                arrayInput.splice(j,1);
+                array.splice(i,1);
+                // s = false;
+                k++;
+            }
         } else {
             j++;
         }
+
         
+        // check
         console.log(`       for1 j${j} => ${array}`);
         console.log(`       for1 j${j} => ${arrayInput}`);
     }
-    if (s == false) {
-        array.splice(i,1);
-    } else {
-        i++;
-        console.log(`for2 i${i} => ${array}`);
-        console.log(`for2 i${i} => ${arrayInput}`);
-    }
+    // if (s == false) {
+    //     array.splice(i,1);
+    // } else {
+    //     i++;
+    //     // check
+    //     console.log(`for2 i${i} => ${array}`);
+    //     console.log(`for2 i${i} => ${arrayInput}`);
+    // }
+    k=0;
 }
 
+// check
 console.log(array);
 console.log(arrayInput);
 
@@ -70,3 +67,4 @@ if (array.length == 0 ) {
 } else {
     console.log(false);
 }
+
