@@ -65,8 +65,8 @@ class List {
        showAll(){
            console.log(`
            Người sở hữu: ${yourName}---------------------
-           ${persons};
            `);
+           console.log(persons);
        }
     
        addCrushEx(){
