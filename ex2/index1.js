@@ -82,6 +82,6 @@ class List {
 
 
 }
-let Ha = new List("Nhat");
-Ha.addCrush("somebody");
-console.log(Ha);
+let Violet = new List("Nhat");
+Violet.addCrush("somebody");
+console.log(Volet);

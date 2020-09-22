@@ -7,6 +7,8 @@ const stringInput = prompt("Nhap mang can kiem tra:");
 const array = string.split("");
 const arrayInput = stringInput.split("");
 
+
+
 array.sort();
 arrayInput.sort();
 
@@ -14,9 +16,13 @@ console.log(array);
 console.log(arrayInput);
 
 check = true;
+if(array.length != array ) {
+    check = false ;
+}
 for (let i = 0; i<array.length;i++) {
     if (array[i] !== arrayInput[i]) {
         check = false;
     }
 }
+
 console.log(check);
