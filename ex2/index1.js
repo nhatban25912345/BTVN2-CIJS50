@@ -65,7 +65,7 @@ class List {
        showAll(){
            console.log(`
            Người sở hữu: ${yourName}---------------------
-           ${this.persons};
+           ${persons};
            `);
        }
     
@@ -82,7 +82,6 @@ class List {
                         let favorite = prompt("Input favorite your crush: ");
                         let nameCrush= new Crush(name,age,address,appearance,favorite);
                         this.persons.push(nameCrush);
-                        console.log(persons);
                     } else if(InputCrushEx == "ex"){
                         let name = prompt("Input name your Ex-Lover: ");
                         let age = prompt("Input age your Ex-Lover:");
@@ -91,7 +90,6 @@ class List {
                         let favorite = prompt("Input favorite your Ex-Lover: ");
                         let nameEx= new Ex_Love(name,age,address,appearance,favorite);
                         this.persons.push(nameEx);
-                        console.log(persons);
                     } else {};
                     let inputContinue = prompt("Do you want continue(yes/no)?");
                     if (inputContinue == "yes" ){
