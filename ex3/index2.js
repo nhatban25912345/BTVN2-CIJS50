@@ -16,7 +16,7 @@ console.log(array);
 console.log(arrayInput);
 
 check = true;
-if(array.length != array ) {
+if(array.length != arrayInput.length ) {
     check = false ;
 }
 for (let i = 0; i<array.length;i++) {
